@@ -1,7 +1,7 @@
-import Three from './Three';
+import Scene from './Scene';
 import Star from './three-components/Star';
 import Cube from './three-components/Cube';
 
 export {
-    Three, Star, Cube
+    Scene, Star, Cube
 }

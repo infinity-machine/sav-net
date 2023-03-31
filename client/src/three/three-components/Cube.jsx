@@ -1,18 +1,23 @@
-import React from 'react'
-import * as THREE from 'three'
+import React from 'react';
+import { useLoader } from '@react-three/fiber';
+import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
-const Cube = () => {
-    const texture = new THREE.TextureLoader().load('textures/tri_pattern.jpg');
+
+
+const Cube = (props) => {
+    const cubeMap = useLoader(TextureLoader, 'textures/tri_pattern.jpg');
 
     const handleClick = (e) => {
-        console.log(e.faceIndex)
-    }
+        if(!!props.setModalOpen) props.setModalOpen(true);
+        if(!props.setModalOpen) props.setModalOpen(false);
+    };
+    
     return (
         <mesh onClick={handleClick} position={[0, 0, 0]}>
             <boxBufferGeometry attach="geometry" args={[20, 20, 20]} />
-            <meshLambertMaterial attach="material" color="lightblue" map={texture}/>
+            <meshLambertMaterial attach="material" map={cubeMap}/>
         </mesh>
-    )
-}
+    );
+};
 
-export default Cube
+export default Cube;

@@ -1,9 +1,9 @@
 import React from 'react'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
-import { Star, Cube } from '../three'
+import { Star, Cube } from '.'
 import starPositions from './util/starPositions';
 
-const Three = () => {
+const Scene = (props) => {
   return (
     <>
       {
@@ -19,9 +19,9 @@ const Three = () => {
       < OrbitControls />
       < ambientLight intensity={.7} />
       < directionalLight position={[3, 5, 5]} angle={0.4} castShadow={true} />
-      <Cube />
+      <Cube modalOpen={props.modalOpen} setModalOpen={props.setModalOpen}/>
     </>
   )
 }
 
-export default Three
+export default Scene
