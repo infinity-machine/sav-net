@@ -21,14 +21,13 @@ const Cube = (props) => {
         texture_5, 
         texture_6
     ] = useLoader(TextureLoader, [
-        'textures/tri_pattern.jpg',
-        'textures/tri_pattern.jpg',
-        'textures/tri_pattern.jpg',
-        'textures/tri_pattern.jpg',
-        'textures/oblong.png',
-        'textures/tri_pattern.jpg'
+        'textures/numbers/numbers-1.png',
+        'textures/numbers/numbers-2.png',
+        'textures/numbers/numbers-3.png',
+        'textures/numbers/numbers-4.png',
+        'textures/numbers/numbers-5.png',
+        'textures/numbers/numbers-6.png'
     ])
-    console.log(texture_1)
 
     const modalToggle = () => {
         if (!!props.setModalOpen) props.setModalOpen(true);
