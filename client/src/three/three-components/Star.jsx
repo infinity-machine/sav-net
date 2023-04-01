@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Star = () => {
     return (
@@ -6,7 +6,7 @@ const Star = () => {
           <sphereBufferGeometry attach='geometry' args={[.1]} />
           <meshBasicMaterial attach='material' color='white' />
         </mesh>
-      )
-}
+      );
+};
 
-export default Star
+export default Star;

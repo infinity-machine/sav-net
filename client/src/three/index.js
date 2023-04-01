@@ -1,7 +1,7 @@
 import Scene from './Scene';
-import Star from './three-components/Star';
+import StarField from './three-components/StarField';
 import Cube from './three-components/Cube';
 
 export {
-    Scene, Star, Cube
+    Scene, StarField, Cube
 }
