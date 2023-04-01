@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import Bio from './modalContent';
+// import { useEffect } from 'react';
+import { Bio, Test } from './modalContent';
 
 const style = {
     position: 'absolute',
@@ -20,6 +21,9 @@ const ModalCore = (props) => {
         e.preventDefault();
         props.setModalOpen(false);
     };
+    // useEffect(() => {
+
+    // }, [props.modalContent]);
 
     return (
         <div>
@@ -30,7 +34,46 @@ const ModalCore = (props) => {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    < Bio handleClose={handleClose}/>
+                    {
+                        props.modalContent === '1' ? (
+                            < Test handleClose={handleClose}
+                            title="1"
+                            content="1" />
+                        ) : <></>
+                    }
+                    {
+                        props.modalContent === '2' ? (
+                            < Test handleClose={handleClose}
+                            title="2"
+                            content="2" />
+                        ) : <></>
+                    }
+                    {
+                        props.modalContent === '3' ? (
+                            < Test handleClose={handleClose}
+                            title="3"
+                            content="3" />
+                        ) : <></>
+                    }
+                    {
+                        props.modalContent === '4' ? (
+                            < Test handleClose={handleClose}
+                            title="4"
+                            content="4" />
+                        ) : <></>
+                    }
+                    {
+                        props.modalContent === 'bio' ? (
+                            < Bio handleClose={handleClose} />
+                        ) : <></>
+                    }
+                    {
+                        props.modalContent === '6' ? (
+                            < Test handleClose={handleClose}
+                            title="6"
+                            content="6" />
+                        ) : <></>
+                    }
                 </Box>
             </Modal>
         </div>

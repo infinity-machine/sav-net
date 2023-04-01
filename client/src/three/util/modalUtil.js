@@ -8,7 +8,13 @@ const returnCubeSide = (faceIndex) => {
 }
 
 const modalContent = (faceIndex) => {
-    console.log(returnCubeSide(faceIndex));
+    const cube_side = returnCubeSide(faceIndex);
+    if (cube_side === 1) return '1';
+    if (cube_side === 2) return '2';
+    if (cube_side === 3) return '3';
+    if (cube_side === 4) return '4';
+    if (cube_side === 5) return 'bio';
+    if (cube_side === 6) return '6';
 };
 
 export default modalContent;

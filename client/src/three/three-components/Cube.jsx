@@ -41,13 +41,16 @@ const Cube = (props) => {
     };
 
     const handleClick = (e) => {
-        modalContent(e.faceIndex);
+        const contentSelection = modalContent(e.faceIndex);
+        props.setModalContent(contentSelection);
         ModalToggle();
         doSpin();
     };
 
     return (
-        <mesh ref={cubeRef} onClick={handleClick} position={[0, 0, 0]}>
+        <mesh ref={cubeRef} 
+        onClick={handleClick} 
+        position={[0, 0, 0]}>
             <boxBufferGeometry attach="geometry" args={[20, 20, 20]} />
             <meshStandardMaterial attach="material-0" map={texture_1} />
             <meshStandardMaterial attach="material-1" map={texture_2} />
