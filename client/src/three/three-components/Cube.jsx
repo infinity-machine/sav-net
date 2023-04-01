@@ -1,17 +1,11 @@
 import { useRef } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
+import modalContent from '../util/modalUtil';
 import gsap from 'gsap';
 
 const Cube = (props) => {
     const cubeRef = useRef(null);
-    // const texture = useLoader(TextureLoader, 'textures/tri_pattern.jpg');
-    // const texture_1 = useLoader(TextureLoader, 'textures/oblong.png')
-    // const texture_2 = useLoader(TextureLoader, 'textures/tri_pattern.jpg')
-    // const texture_3 = useLoader(TextureLoader, 'textures/tri_pattern.jpg')
-    // const texture_4 = useLoader(TextureLoader, 'textures/tri_pattern.jpg')
-    // const texture_5 = useLoader(TextureLoader, 'textures/tri_pattern.jpg')
-    // const texture_6 = useLoader(TextureLoader, 'textures/tri_pattern.jpg')
 
     const [
         texture_1, 
@@ -29,7 +23,7 @@ const Cube = (props) => {
         'textures/numbers/numbers-6.png'
     ])
 
-    const modalToggle = () => {
+    const ModalToggle = () => {
         if (!!props.setModalOpen) props.setModalOpen(true);
         if (!props.setModalOpen) props.setModalOpen(false);
     }
@@ -47,9 +41,9 @@ const Cube = (props) => {
     };
 
     const handleClick = (e) => {
-        modalToggle();
+        modalContent(e.faceIndex);
+        ModalToggle();
         doSpin();
-        console.log(e.faceIndex);
     };
 
     return (
