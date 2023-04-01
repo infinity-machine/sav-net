@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Bio from './modalContent';
 
 const style = {
     position: 'absolute',
@@ -15,7 +14,7 @@ const style = {
     p: 4,
 };
 
-const ModalTest = (props) => {
+const ModalCore = (props) => {
 
     const handleClose = (e) => {
         e.preventDefault();
@@ -31,17 +30,11 @@ const ModalTest = (props) => {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Text in a modal
-                    </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                    </Typography>
-                    <Button onClick={handleClose}>CLOSE MODAL</Button>
+                    < Bio handleClose={handleClose}/>
                 </Box>
             </Modal>
         </div>
     );
 };
 
-export default ModalTest
+export default ModalCore

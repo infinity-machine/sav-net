@@ -47,8 +47,8 @@ const Cube = (props) => {
     };
 
     const handleClick = (e) => {
-        // modalToggle();
-        // doSpin();
+        modalToggle();
+        doSpin();
         console.log(e.faceIndex);
     };
 
