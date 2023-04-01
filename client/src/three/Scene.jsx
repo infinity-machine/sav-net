@@ -6,11 +6,11 @@ const Scene = (props) => {
   return (
     <>
       < StarField />
-      <PerspectiveCamera makeDefault position={[0, 0, 60]} />
+      < PerspectiveCamera makeDefault position={[0, 0, 60]} />
       < OrbitControls />
       < ambientLight intensity={.7} />
       < directionalLight position={[3, 5, 5]} angle={0.4} castShadow={true} />
-      <Cube modalOpen={props.modalOpen} setModalOpen={props.setModalOpen}/>
+      < Cube modalOpen={props.modalOpen} setModalOpen={props.setModalOpen}/>
     </>
   );
 };
