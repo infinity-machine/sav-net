@@ -3,27 +3,23 @@ import Modal from '@mui/material/Modal';
 // import { useEffect } from 'react';
 import { Bio, Test } from './modalContent';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-};
-
 const ModalCore = (props) => {
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 300,
+        opacity: .75,
+        bgcolor: 'white',
+        boxShadow: 24,
+        p: 4,
+    };
 
     const handleClose = (e) => {
         e.preventDefault();
         props.setModalOpen(false);
     };
-    // useEffect(() => {
-
-    // }, [props.modalContent]);
 
     return (
         <div>

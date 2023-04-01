@@ -36,7 +36,6 @@ const Cube = (props) => {
                 duration: .5,
                 ease: 'none'
             },0);
-            console.log(cubeRef.current.scale)
             timeline.to(cubeRef.current.scale, {
                 x: .5,
                 y: .5,
@@ -89,7 +88,7 @@ const Cube = (props) => {
         <mesh ref={cubeRef} 
         onClick={handleClick} 
         position={[0, 0, 0]}>
-            <boxBufferGeometry attach="geometry" args={[.01, .01, .01]} />
+            <boxGeometry attach="geometry" args={[.01, .01, .01]} />
             <meshStandardMaterial attach="material-0" map={texture_1} />
             <meshStandardMaterial attach="material-1" map={texture_2} />
             <meshStandardMaterial attach="material-2" map={texture_3} />

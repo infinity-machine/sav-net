@@ -13,7 +13,7 @@ const StarField = () => {
         starPositions.map((position, index) => {
           return (
             <mesh position={position} key={index}>
-              <sphereBufferGeometry attach='geometry' args={[.1]} />
+              <sphereGeometry attach='geometry' args={[.1]} />
               <meshBasicMaterial attach='material' color='white' />
             </mesh>
           );
