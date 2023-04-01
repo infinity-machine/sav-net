@@ -16,7 +16,7 @@ const style = {
 };
 
 const ModalTest = (props) => {
-    
+
     const handleClose = (e) => {
         e.preventDefault();
         props.setModalOpen(false);
